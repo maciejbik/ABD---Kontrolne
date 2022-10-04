@@ -288,6 +288,7 @@ ol
 .amogus
 {
     visibility: hidden;
+    pointer-events: none;
     position: fixed;
     z-index: 2000;
     display: flex;
