@@ -1,0 +1,68 @@
+
+@keyframes wiggle {
+    0%
+    {
+        transform: translateX(0) $scaler;
+    }
+    25%
+    {
+        transform: translateX(-$move) $scaler;
+    }
+    50%
+    {
+        transform: translateX(0px) $scaler;
+    }
+    75%
+    {
+        transform: translateX($move) $scaler;
+    }
+    100%
+    {
+        transform: translateX(0) $scaler;
+    }
+}
+
+@keyframes expand {
+    from
+    {
+        transform: scale(1,1);
+    }
+    to
+    {
+        transform: scale(200,200);
+    }
+}
+@keyframes begin {
+    from
+    {
+        transform: scale(0.3,0.3);
+    }
+    to
+    {
+        transform: scale(1,1);
+    }
+}
+@keyframes end {
+    from
+    {
+        transform: scale(1,1);
+    }
+    to
+    {
+        transform: scale(0.7,0.7);
+    }
+}
+@keyframes wobble {
+    0%
+    {
+        transform: translateY(-20px);
+    }
+    50%
+    {
+        transform: translateY(0);
+    }
+    100%
+    {
+        transform: translateY(-20px);
+    }
+}

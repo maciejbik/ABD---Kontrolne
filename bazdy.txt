@@ -1,0 +1,94 @@
+  <li>Relacyjna, Obiektowa, Rozproszona, Hurtowa</li>
+            <li>Jest to forma magazynowania danych zgodnie z określonymi regułami</li>
+            <li>Sposób zapisu danych. Jest to złożony z kolumn i wierszy pojemnik na dane</li>
+            <li>Jest to pojedyncza zmienna z tabeli</li>
+            <li>Rekord jest to jeden wiersz danych (jedna krotka w relacji).</li>
+            <li>Klucz podstawowy jest to wartość identyfikująca dane pole, dzięki czemu jest ono unikalne</li>
+            <li>Klucz obcy jest to odwołanie do klucza podstawowego w innej tabeli</li>
+            <li>Relacja jest to dowiązanie pomiędzy elementami z różnych tabel</li>
+            <li>Przykładowe typy danych: varchar2, int, bool, double, date, bit</li>
+            <li> CREATE DATABASE [nazwa];</li>
+            <li> CREATE TABLE [nazwa] ([pole 1] [typ 1], [pole 2] [typ 2] ,…]);</li>
+            <li>. SELECT [pola] [, pole2, …] FROM [tabela];</li>
+            <li> Widok jest to podzapytanie umożliwiające wygodniejsze zaglądanie do potrzebnych nam danych
+                CREATE VIEW [nazwa] as [polecenie];</li>
+            <li> Służy do wybierania potrzebnych nam rekordów z bazy danych pod danymi warunkami</li>
+            <li> Należy posłużyć się klauzulą ORDER BY [kolumna] ASC; na końcu zapytania</li>
+            <li> LIKE służy ona do znajdywania określonych zmiennych i wyrazów</li>
+            <li> BETWEEN … AND … służy do znajdywania wartości w podanym przedziale</li>
+            <li> LIMIT 1 ogranicza wypisywane wyniki do jednego z góry</li>
+            <li> Łączymy je za pomocą klauzuli JOIN</li>
+            <li> GROUP BY grupuje ona wyrazy co umożliwia używanie funkcji agregacyjnych </li>
+            <li> HAVING jest to wykonywana po grupowaniu operacja mająca na celu sprecyzowania potrzebnych danych</li>
+            <li> DISTINCT - jest to klauzula, dzięki której jesteśmy w stanie ograniczyć ilość informacji, poprzez
+                eliminacje danych powtarzających się w zapytaniu.
+                Przykład: SELECT DISTINCT info FROM info1;</li>
+            <li> Aliasy to nazwy pomagające zidentyfikować daną część zapytania, by było lepiej czytelne.
+                Aby je zastosować należy posłużyć się klauzulą AS przy nazwie pola w zapytaniu.
+                Przykład: SELECT info AS „informacje” FROM info1;</li>
+            <li> INSERT INTO służy do wprowadzania rekordów do tabeli</li>
+            <li> INSERT INTO [tabela] VALUES ( [wartości rekordu 1 {, …} ] ) , ( [wartości rekordu 2 {, …}] );</li>
+            <li> UPDATE służy do aktualizowania danych rekordów i zmiany ich wartości</li>
+            <li> UPDATE [tabela] SET [kolumna1] = {wartość}, [kolumna2] = {wartość} WHERE [warunek];</li>
+            <li> DROP służy do usuwania tabeli, kolumn, widoku bądź bazy danych</li>
+            <li> DELETE służy do usuwania rekordów</li>
+            <li> TRUNCATE usuwa wszystkie rekordy z tabeli</li>
+            <li> Podział:
+                DROP – usuwa tabele, kolumny, widoki lub bazę
+                DELETE – usuwa rekordy, pod ustawionym warunkiem
+                TRUNCATE – usuwa wszystkie rekordy z tabeli</li>
+            <li> ALTER służy do zmian właściwości tabeli w bazie danych</li>
+            <li> ALTER TABLE [nazwa] ADD ( [nazwa kolumny] [typ kolumny] );</li>
+            <li> Oznaczają gdzie w którym miejscu w tabeli ma znajdować się tworzona kolumna po którym elemencie.
+                FIRST oznaczając, że kolumna ma być pierwsza, natomiast AFTER [kolumna], po danej kolumnie</li>
+            <li> ALTER TABLE [nazwa] RENAME [nowa nazwa];</li>
+            <li> Operując słowem kluczowym PRIMARY KEY</li>
+            Dodawania: ALTER TABLE [nazwa tabeli] ADD PRIMARY KEY [nazwa kolumny];
+            Usuwanie: ALTER TABLE [nazwa tabeli] DROP CONSTRAINT [klucz główny];</li>
+            <li> „35. ALTER TABLE [nazwa] RENAME [nowa nazwa];” ( powtóreczka pytania )</li>
+            <li> „33. ALTER TABLE [nazwa] ADD ( [nazwa kolumny] [typ kolumny);” ( powtóreczka pytania )</li>
+            <li> „34. Oznaczają gdzie w którym miejscu w tabeli ma znajdować się tworzona kolumna po którym elemencie.
+                FIRST oznaczając, że kolumna ma być pierwsza, natomiast AFTER [kolumna], po danej kolumnie”
+                ( powtóreczka pytania )</li>
+            <li> „35. ALTER TABLE [nazwa] RENAME [nowa nazwa];” ( powtóreczka pytania )</li>
+            <li> „36. Operując słowem kluczowym PRIMARY KEY
+                Dodawania: ALTER TABLE [nazwa tabeli] ADD PRIMARY KEY [nazwa kolumny];
+                Usuwanie: ALTER TABLE [nazwa tabeli] DROP CONSTRAINT [klucz główny];” ( powtóreczka pytania )</li>
+            <li> Transakcje pomagają zachować potrzebną synchronizację bazy danych, oraz pomagają przy awariach.</li>
+            <li>
+                A ( Atomicity )
+                C ( Consistency )
+                I ( Isolation )
+                D ( Durablility )
+                - Atomowość – możliwość wycofania operacji w przypadku transakcji zakończonej niepowodzeniem
+                - Spójność – Sprawdzanie spójności danych zawartych w bazie, które nie powinny dopuszczać do łamania
+                zasad
+                ustalonych przez twórcę
+                - Izolacja – Jednocześnie wykonywane transakcje nie mają na siebie wpływu.
+                - Trwałość – Po zaakceptowaniu transakcji dane nie będą stracone</li>
+            <li>
+                Read Uncommitted
+                Read Committed
+                Repetable Read
+                Serializable</li>
+            <li> GRANT służy do przyznawania uprawnień danym użytkownikom w bazie danych do wykonywania konkretnych
+                operacji na niej</li>
+            <li> REVOKE służy do zabierania uprawnień danym użytkownikom w bazie danych do wykonywania konkretnych
+                operacji na niej</li>
+            <li>.
+                BACKUP DATABASE [nazwa bazy] TO DISK [ścieżka];</li>
+            <li> Kopia zapasowa jest to kopia bazy danych wykonywana w razie awarii. Tworzymy ją aby móc przywrócić bazę
+                do poprzedniego staniu w razie awarii</li>
+            <li>. </li>
+            <li> Jest to unikanie redundancji danych, czyli powtarzania się danych w wielu tabelach oraz zwiększenia
+                uporządkowania danych w bazie.</li>
+            <li> Są trzy postacie normalne:
+                - pierwsza postać normalna: każda wartość w bazie danych powinna być atomowa.
+                - druga postać normalna: pierwsza normalna i wszystkie kolumny muszą zależeć od klucza głównego
+                - trzecia postać normalna: druga normalna i niekluczowa kolumna nie może zależeć od innej niekluczowej
+                kolumny</li>
+            <li> Zalety normalizacji danych:
+                - zlikwidowanie problemu powtarzania danych.
+                - optymalizacja objętości bazy danych.
+                - optymalizacja efektywności obsługi bazy danych.
+                - minimalizacja zagrożenia błędami przy wprowadzaniu i usuwaniu danych (uniknięcie anomalii)</li>

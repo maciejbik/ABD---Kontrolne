@@ -1,0 +1,279 @@
+$scaler: scale(1.03,1.03);
+$move: 10px;
+
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+@import "scroller";
+@import "animation";
+
+// Body
+body
+{
+    margin: 0;
+    background-color: #181716;
+    font-family: "Changa",sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+// Main
+.main
+{
+    
+}
+.main-header
+{
+    text-transform: uppercase;
+    text-shadow: 4px 4px black;
+    color: #d73030;
+    font-size: 36px;
+
+}
+// Lists
+ol
+{
+    a
+    {
+        color: inherit;
+        text-decoration: inherit;
+        &:focus
+        {
+            outline: none;
+            li
+            {
+                transform: scale(1.03,1.03);
+                overflow: hidden;
+                animation: wiggle 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+                position: relative;
+                cursor: pointer;
+                &::after
+                {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    background-color: #d73030;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    left: calc(50% - 10px);
+                    bottom: calc(50% - 10px);
+                    animation: 600ms expand both cubic-bezier(.86,.08,.07,.98);
+                    z-index: -5;
+                }
+            }
+        }
+    }
+    ::marker
+    {
+        z-index: 2;
+    }
+    li
+    {
+        width: 70vw;
+        padding: 10px;
+        position: relative;
+        &::before
+        {
+            content: "";
+            display: inline-block;
+            z-index: -3;
+            left: 0;
+            top: 0;
+            position: absolute;
+            padding: 20px;
+            border-radius: 50%;
+            background-color: #181716;
+        }
+        margin: 10px 5px;
+        border: 3px solid #ffffff;
+        border-radius: 10px;
+        transition: transform 100ms ease-in-out;
+        
+        &:hover
+        {
+            transform: scale(1.03,1.03);
+            overflow: hidden;
+            animation: wiggle 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+            position: relative;
+            cursor: pointer;
+            &::after
+            {
+                position: absolute;
+                content: "";
+                display: block;
+                background-color: #d73030;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                left: calc(50% - 10px);
+                bottom: calc(50% - 10px);
+                animation: 600ms expand both cubic-bezier(.86,.08,.07,.98);
+                z-index: -5;
+            }
+        }
+    }
+}
+
+.menu
+{
+    z-index: 20;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000b8;
+    #backexit
+    {
+        width: 100vw;
+        height: 100vh;
+        background-color: none;
+        position: absolute;
+    }
+
+    .menu-question
+    {
+        animation: begin 50ms ease;
+    }
+    .answer-block
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        height: 80%;
+    }
+    .menu-answer
+    {
+        animation: begin 50ms ease;
+        font-size: 30px;
+        width: 100%;
+    }
+    .menu-img
+    {
+        max-width: 60%;
+        border-radius: 10px;
+        box-shadow: 0px 2px 100px 5px #922323;        
+        transition: transform 200ms cubic-bezier(0.165, 0.84, 0.44, 1);
+        &:hover
+        {
+            transform: scale(1.03,1.03);
+        }
+        animation: begin 50ms ease;
+        
+    }
+
+    .menu-content
+    {
+        background-color: #d73030;
+        display: grid;
+        grid-template-rows: 0 2fr 5fr;
+        padding: 30px;
+        border-radius: 20px;
+        width: 70%;
+        height: 80%;
+        position: relative;
+        box-shadow: 0px 0px 10px 4px #460f0f;
+        animation: begin 130ms cubic-bezier(0.075, 0.82, 0.165, 1) both;
+        h1
+        {
+            max-width: 90%;
+        }
+        .exit
+        {
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height:  40px;
+            background-color: white;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border-radius: 50%;
+            transition: background-color 100ms ease-in-out;
+            &::after
+            {
+                content: "😎";
+            }
+            &:hover
+            {
+                background-color: #181716;
+                cursor: pointer;
+                &::after
+                {
+                    content: "💀";
+                }
+            }
+        }
+
+        .left,.right
+        {
+            position: absolute;
+            button
+            {
+                width: 50px;
+                height: 50px;
+                border: none;
+                border-radius: 50%;
+                transition: transform 100ms ease-in-out,color 200ms ease-in-out, background-color 200ms ease-in-out;
+                border: 2px solid white;
+                &:hover
+                {
+                    color: white;
+                    cursor: pointer;
+                    background-color: #181716;
+                    transform: scale(1.2,1.2);
+                }
+            }
+            font-size: 100px;
+        }
+        .left
+        {
+            bottom: 0;
+            left: 30px;
+        }
+        .right
+        {
+            bottom: 0;
+            right: 30px;
+        }
+    }
+}
+.disabled
+{
+    display: none !important;
+}
+.end
+{
+    animation: end 160ms cubic-bezier(0.075, 0.82, 0.165, 1) both !important;
+}
+.menu-arrows
+{
+    height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.jumper
+{
+    background-color: #460f0f;
+    color: white;
+    border: 2px solid white;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    transition: background-color 100ms ease, transform 100ms ease;
+    &:hover
+    {
+        background-color: #181716;
+        transform: scale(1.1,1.1);
+        cursor: pointer;
+    }
+}

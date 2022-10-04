@@ -1,0 +1,69 @@
+odpowiedzi = ["Relacyjne, Obiektowe, Rozproszone, Hurtowe ",
+"Baza danych to zorganizowany zbiór usystematyzowanych informacji, czyli danych, zwykle przechowywany w systemie komputerowym w formie elektronicznej. Bazą danych steruje zwykle system zarządzania bazami danych (DBMS).",
+"Tabele to podstawowe obiekty bazy danych, w których są przechowywane wszystkie informacje lub dane.",
+"Pole – pojedyncza zmienna, stanowiąca fragment struktury, unii, klasy, obiektu lub rekordu tabeli bazodanowej.",
+"W relacyjnych bazach danych rekord to jeden wiersz w tabeli, czyli jedna krotka w relacji. Podczas przetwarzania wyników zapytań do bazy danych, które mogą zawierać połączone dane z kilku tabel, pojedynczy wiersz również jest nazywany rekordem.",
+"Klucz podstawowy jest polem lub zestawem pól o unikatowych wartościach w tabeli. Wartości klucza mogą służyć do tworzenia odniesień do całych rekordów, ponieważ każdy rekord ma inną wartość klucza.",
+"Klucz obcy to tak naprawdę klucz podstawowy, ale wzięty z innej tabeli. Jest wykorzystywany w celu tworzenia relacji pomiędzy tabelami.",
+"Relacja jest to połączenie, które tworzymy między dwoma tabelami. Polega ono na logicznym złączeniu dwóch pól z dwóch różnych tabel.",
+"Int - liczba całkowita, Decimal - stałoprzecinkowe, Double - zmiennoprzecinkowe, Boolean - zmienna logiczna, Date - data, Bit - wartość binarna, Varchar - zmienna znakowa, ",
+"CREATE DATABASE nazwa_bazy_danych; (obrazek)",
+"CREATE TABLE nazwa_tabeli(nazwa_kolumny typ_danych parametry, ...); (obrazek)",
+"(dopisać) (obrazek)",
+"Widoki to nic innego jak zapytania SQL, które zostały zapisane i są przechowywane w bazie danych pod pewną nazwą. (obrazek)",
+"Służy do pobierania i przetwarzania danych zapisanych w bazie danych.",
+"Z pomocą przychodzi Nam klauzula ORDER BY. Użycie jej jest bardzo proste, wystarczy podać nazwę kolumny po której chcemy sortować dane.",
+"Klauzula LIKE pozwala przefiltrować tabelę na podstawie tylko części wartości tekstowej. (obrazek)",
+"BETWEEN (ang. pomiędzy) służy do określania parametrów brzegowych w warunkach w klauzuli WHERE. (obrazek)",
+"LIMIT 1 ogranicza wypisywane wyniki do jednego z góry. (obrazek)",
+"Łączymy je za pomocą klauzuli JOIN, bądź dodajemy wiersze z jednej do drugiej za pomocą UNION.",
+"Umożliwia podział wierszy na logiczne grupy, co pozwala na użycie funkcji agregujących.",
+"Filtrowanie w HAVING, polega na filtrowaniu całych grup rekordów. (obrazek)",
+"Klauzula DISTINCT powoduje, że zapytanie ignoruje zduplikowane wyniki zapytania. (obrazek)",
+"nazwa zastępcza, którą możemy zdefiniować dla konkretnej kolumny lub tabeli na początku zapytania, a następnie używać w całym zapytaniu jako wygodniejsza nazwa. (obrazek)",
+"Pozwala na dodanie jednego lub wielu rekordów do tabeli. Nazywa się to zapytanie dołączające. (obrazek)",
+"(obrazek)",
+"Służy do aktualizacji rekordów w bazie danych. (obrazek)",
+"(obrazek)",
+"DROP pozwala na usunięcie indexów, tablic, baz danych. (obrazek)",
+"Służy do kasowania wybranych wierszy z danej tabeli. (obrazek)",
+"Usuwa wszystkie wiersze z tabeli bez rejestrowania usunięcia poszczególnych wierszy. (obrazek)",
+"Podział:
+DROP – usuwa tabele, kolumny, widoki lub bazę.
+DELETE – usuwa rekordy, pod ustawionym warunkiem.
+TRUNCATE – usuwa wszystkie rekordy z tabeli.",
+"ALTER służy do zmian właściwości tabeli w bazie danych.",
+"(obrazek)",
+"Oznaczają w którym miejscu w tabeli ma znajdować się tworzona kolumna. FIRST oznaczając, że kolumna ma być pierwsza, natomiast AFTER po podanej kolumnie. (obrazek)",
+"(obrazek)",
+"(obrazek)",
+"(powtórka)",
+"(powtórka)",
+"(powtórka)",
+"(powtórka)",
+"(powtórka)",
+"Transakcje pomagają zachować potrzebną synchronizację bazy danych, oraz pomagają przy awariach.",
+"A ( Atomicity ) C ( Consistency ) I ( Isolation ) D ( Durablility )
+- Atomowość – możliwość wycofania operacji w przypadku transakcji zakończonej niepowodzeniem
+- Spójność – Sprawdzanie spójności danych zawartych w bazie, które nie powinny dopuszczać do łamania zasad ustalonych przez twórcę
+- Izolacja – Jednocześnie wykonywane transakcje nie mają na siebie wpływu.
+- Trwałość – Po zaakceptowaniu transakcji dane nie będą stracone",
+"Read Uncommitted
+Read Committed
+Repetable Read
+Serializable",
+"GRANT służy do przyznawania uprawnień danym użytkownikom w bazie danych do wykonywania konkretnych operacji na niej. (obrazek)",
+"REVOKE służy do zabierania uprawnień danym użytkownikom w bazie danych do wykonywania konkretnych operacji na niej. (obrazek)",
+"(dopisać)",
+"Kopia zapasowa jest to kopia bazy danych wykonywana w razie awarii. Tworzymy ją aby móc przywrócić bazę do poprzedniego staniu w razie awarii.",
+"(powtórka)",
+"Jest to unikanie redundancji danych, czyli powtarzania się danych w wielu tabelach oraz zwiększenia uporządkowania danych w bazie.",
+"Są trzy postacie normalne:
+- pierwsza postać normalna: każda wartość w bazie danych powinna być atomowa.
+- druga postać normalna: pierwsza normalna i wszystkie kolumny muszą zależeć od klucza głównego
+- trzecia postać normalna: druga normalna i niekluczowa kolumna nie może zależeć od innej niekluczowej kolumny",
+"Zalety normalizacji danych:
+- zlikwidowanie problemu powtarzania danych.
+- optymalizacja objętości bazy danych.
+- optymalizacja efektywności obsługi bazy danych.
+- minimalizacja zagrożenia błędami przy wprowadzaniu i usuwaniu danych (uniknięcie anomalii)"];

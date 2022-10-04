@@ -1,0 +1,37 @@
+obrazek:
+10 - tworzenie bazy danych
+11 - tworzenie tabeli
+12 - tworzenie tabeli z zapytaniem select
+16 - Stosowanie klauzuli LIKE
+17 - Stosowanie klauzuli BETWEEN
+18 - Stosowanie klauzuli LIMIT 1
+20 - Stosowanie Group (NIE MA)
+21 - Stosowanie HAVING
+22 - Stosowanie DISTINCT
+23 - Stosowanie Aliasów 
+24 - Polecenie INSERT INTO
+25 - Polecenie INSERT INTO dla wielu rekordów
+26 - Stosowanie UPDATE
+27 - Wielokolumnowy UPDATE
+28 - Stosowanie DROP
+29 - Stosowanie DELETE
+30 - Stosowanie TRUNCATE
+33 - dodawanie kolumny do istniejącej tabeli
+34 - Stosowanie FIRST i AFTER
+35 - Zmiana nazwy tabeli
+36 - Usuwanie i dodawanie klucza podstawowego
+
+powtórka:
+37
+38
+39
+40
+41
+
+dopisać:
+12
+
+47
+49
+
+- DODAĆ jumpera na powtórkach
