@@ -359,4 +359,21 @@ ol li:hover::after {
   background-color: #181716;
   transform: scale(1.1, 1.1);
   cursor: pointer;
+}
+
+.secret {
+  position: fixed;
+  left: 0;
+  top: -24px;
+  background-color: white;
+}
+
+.amogus {
+  visibility: hidden;
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */

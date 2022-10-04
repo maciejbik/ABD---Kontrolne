@@ -139,3 +139,15 @@ function ImageExist(url)
    img.src = url;
    return img.height != 0;
 }
+
+
+
+function susus()
+{
+    var secret = document.querySelector(".secret");
+    var amogus = document.querySelector(".amogus");
+    if(secret.value == "sus" || secret.value == "SUS")
+    {
+        amogus.style["visibility"] = "visible";
+    }
+}
