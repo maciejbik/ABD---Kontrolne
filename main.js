@@ -54,7 +54,7 @@ function wlacz(i)
     //Zdjęcia do pytań
     var answer_block = document.querySelector(".answer-block");
     var answer_block_img = document.querySelector(".answer-block__img");
-    answer_block_img.innerHTML=`<img class="menu-img" src="img/image${i+1}.png" alt="">`;
+    answer_block_img.innerHTML=`<img class="menu-img" src="img/image${i+1}-min.png" alt="">`;
 
     // console.log(document.querySelector(".menu-img"));
 
