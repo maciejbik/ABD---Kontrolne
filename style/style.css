@@ -371,7 +371,7 @@ ol li:hover::after {
 .amogus {
   visibility: hidden;
   position: fixed;
-  z-index: 20;
+  z-index: 2000;
   display: flex;
   justify-content: center;
   align-items: center;
